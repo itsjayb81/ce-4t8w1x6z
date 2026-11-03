@@ -185,12 +185,22 @@ footer{background:var(--dark);color:var(--dark-ink);min-height:72svh;padding:cla
   .events .lead{margin-bottom:24px;max-width:none}
   .truck{grid-template-columns:1fr}
 }
+
+/* v3: dish photos in the red menu */
+.menu .item{display:grid;grid-template-columns:minmax(0,1fr) clamp(180px,38vw,560px);grid-template-rows:auto auto;column-gap:clamp(16px,3vw,48px);row-gap:6px;align-content:center;align-items:end;font-size:clamp(36px,6.4vw,108px);padding:clamp(10px,1.2vw,18px) 0;border-top:1px solid rgba(255,247,242,.28)}
+.menu .item:last-child{border-bottom:1px solid rgba(255,247,242,.28)}
+.menu .item .n{grid-column:1;grid-row:1;align-self:end;display:block}
+.menu .item .d{grid-column:1;grid-row:2;align-self:start;max-width:none;text-align:left;font-size:clamp(1rem,.8rem + .6vw,1.3rem)}
+.menu .item img{grid-column:2;grid-row:1/3;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;display:block}
+@media (max-width:760px){
+  .menu .item{grid-template-columns:minmax(0,1fr) 36vw;font-size:clamp(30px,9vw,52px)}
+}
 </style>
 <noscript><style>.rise,.hb .row p,.ph .logo{opacity:1!important}</style></noscript>
 </head>
 <body>
 
-<div class="draft">Draft for Roger and Sharmila to review. Not live. Phone, Instagram and event details to be confirmed.</div>
+<div class="draft">Draft for Roger and Sharmila to review. Not live.</div>
 
 <header class="hero" id="top">
   <div class="ph">
@@ -211,14 +221,17 @@ footer{background:var(--dark);color:var(--dark-ink);min-height:72svh;padding:cla
 <section class="menu" id="menu" aria-labelledby="menu-h">
   <h2 class="vh" id="menu-h">The menu</h2>
   <ul>
-    <li class="item rise"><span>Chicken skewers</span><span class="d">Our chicken tikka skewers, off the char grill</span></li>
-    <li class="item rise" data-d="1"><span>Tandoori chicken</span><span class="d">With chips</span></li>
-    <li class="item rise" data-d="2"><span>Lollipop chicken</span><span class="d">Six pieces, a crowd favourite</span></li>
-    <li class="item rise" data-d="3"><span>Butter chicken</span><span class="d">With saffron rice</span></li>
-    <li class="item rise" data-d="4"><span>Spicy chips</span><span class="d">Our homemade spice, or plain</span></li>
-    <li class="item rise" data-d="4"><span>For the kids</span><span class="d">Chicken nuggets and chips, paratha with Nutella</span></li>
+    <li class="item rise"><span class="n">Chicken skewers</span><span class="d">Our chicken tikka skewers, off the char grill</span><img src="img/dish-skewers.jpg" width="720" height="450" alt="Chicken skewers" loading="lazy"></li>
+    <li class="item rise" data-d="1"><span class="n">Tandoori chicken</span><span class="d">With chips</span><img src="img/dish-tandoori.jpg" width="720" height="450" alt="Tandoori chicken" loading="lazy"></li>
+    <li class="item rise" data-d="2"><span class="n">Lollipop chicken</span><span class="d">Six pieces, a crowd favourite</span><img src="img/dish-lollipop.jpg" width="720" height="450" alt="Lollipop chicken" loading="lazy"></li>
+    <li class="item rise" data-d="3"><span class="n">Butter chicken</span><span class="d">With saffron rice</span><img src="img/dish-butter.jpg" width="720" height="450" alt="Butter chicken" loading="lazy"></li>
+    <li class="item rise" data-d="4"><span class="n">Spicy chips</span><span class="d">Our homemade spice, or plain</span><img src="img/dish-chips.jpg" width="720" height="450" alt="Spicy chips" loading="lazy"></li>
+    <li class="item rise" data-d="4"><span class="n">Samosas</span><span class="d">Two pieces</span><img src="img/dish-samosa.jpg" width="720" height="450" alt="Samosas" loading="lazy"></li>
+    <li class="item rise" data-d="4"><span class="n">Lamb biryani</span><span class="d">Event menus</span><img src="img/dish-biryani.jpg" width="720" height="450" alt="Lamb biryani" loading="lazy"></li>
+    <li class="item rise" data-d="4"><span class="n">Paratha</span><span class="d">Two pieces, cheese or Nutella</span><img src="img/dish-paratha.jpg" width="720" height="450" alt="Paratha" loading="lazy"></li>
+    <li class="item rise" data-d="4"><span class="n">For the kids</span><span class="d">Chicken nuggets and chips, six pieces</span><img src="img/dish-nuggets.jpg" width="720" height="450" alt="For the kids" loading="lazy"></li>
   </ul>
-  <p class="note rise">Event menus also include samosas, lamb biryani and cheese or Nutella parathas. The meat is halal.</p>
+  <p class="note rise">Samosas, lamb biryani and parathas are on the event menus. The meat is halal.</p>
 </section>
 
 <section class="sheets" aria-label="The printed menus">
@@ -251,16 +264,15 @@ footer{background:var(--dark);color:var(--dark-ink);min-height:72svh;padding:cla
 </section>
 
 <section class="gal" id="photos" aria-labelledby="gal-h">
-  <h2 class="t rise" id="gal-h">On the grill, at the window, in the queue</h2>
-  <div class="strip" tabindex="0" aria-label="Photos of the truck and the food, scroll sideways">
-    <figure><img src="img/truck-queue.jpg" width="1600" height="1200" alt="A queue of customers at the red Chilli Express truck" loading="lazy"></figure>
-    <figure><img src="img/spread-1.jpg" width="960" height="640" alt="Chickpeas, lentils, paratha and fresh chillies on a wooden board" loading="lazy"></figure>
-    <figure><img src="img/event-crowd.jpg" width="1600" height="1200" alt="A crowd at the serving window of the truck" loading="lazy"></figure>
-    <figure><img src="img/dahl-1.jpg" width="960" height="640" alt="Daal and spiced potato with fresh paratha" loading="lazy"></figure>
-    <figure><img src="img/mango-lassi.jpg" width="1400" height="1400" alt="Two bottles of mango lassi beside a fresh mango" loading="lazy"></figure>
-    <figure><img src="img/grill-window.jpg" width="1600" height="1200" alt="A cook at the grill window serving customers" loading="lazy"></figure>
-    <figure><img src="img/chickpea-paratha.jpg" width="640" height="960" alt="Spiced chickpeas in a black pan with paratha" loading="lazy"></figure>
-    <figure><img src="img/dusk-queue.jpg" width="1600" height="1200" alt="The truck lit up at dusk with a line of guests" loading="lazy"></figure>
+  <h2 class="t rise" id="gal-h">Past events</h2>
+  <div class="strip" tabindex="0" aria-label="Photos from past events, scroll sideways">
+    <figure><img src="img/past-1.jpg" alt="A busy night market with the Chilli Express serving window" loading="lazy"></figure>
+    <figure><img src="img/past-2.jpg" alt="Guests queuing at a night market under the lights" loading="lazy"></figure>
+    <figure><img src="img/past-3.jpg" alt="Crowds walking past the food stalls at night" loading="lazy"></figure>
+    <figure><img src="img/past-4.jpg" alt="A long queue of guests at a night market" loading="lazy"></figure>
+    <figure><img src="img/past-5.jpg" alt="Guests in the market hall at night" loading="lazy"></figure>
+    <figure><img src="img/past-6.jpg" alt="The market hall packed with people" loading="lazy"></figure>
+    <figure><img src="img/past-7.jpg" alt="The street food aisle at a night market" loading="lazy"></figure>
   </div>
 </section>
 
